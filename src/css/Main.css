@@ -1,0 +1,54 @@
+.container {
+  opacity: 0.9;
+}
+
+.title {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.titleText {
+  border-bottom: 3px black solid;
+  color: black;
+}
+
+.places {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+@media (max-width:600px) {
+  .places {
+    flex-flow: column nowrap;
+    margin: 0px 40px 0px 40px;
+  }
+}
+
+.placesText {
+  color: white;
+  min-width: 200px;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 10px;
+  margin: 20px 10px 20px 10px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.addPlace {
+  min-width: 200px;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 10px;
+  margin: 20px 10px 20px 10px;
+  font-size: 20px;
+  border: 1px black dashed;
+  border-radius: 10px;
+}

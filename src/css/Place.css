@@ -1,0 +1,49 @@
+.iconText {
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size:60px;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.name {
+  font-size:30px;
+  padding: 20px;
+  color:white;
+  opacity: 0.9;
+}
+
+.via, .orario {
+  font-size:20px;
+  padding: 20px 10px 20px 10px;
+}
+
+.hubs {
+  font-size: 20px;
+  padding: 0px 10px 0px 10px ;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.sensContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.hubText {
+  cursor: pointer;
+  color: black;
+}
+
+.hubText:hover{
+  text-decoration: underline;
+}
+
+.sensText, .tupText {
+  padding: 0px 10px 0px 10px;
+}
