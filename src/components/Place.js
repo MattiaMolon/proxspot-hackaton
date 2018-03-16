@@ -27,7 +27,7 @@ class Place extends Component {
         }
       }
       this.setState({ place, hubs });
-    })
+    });
 
   }
 
@@ -97,7 +97,7 @@ class Place extends Component {
   render() {
     return (
       <div className="container">
-        <div className="name" style={{ backgroundColor: this.state.place.Colore }}> {this.state.place.name} </div>
+        <div className="name" style={{ backgroundColor: this.state.place.Colore }}> {this.state.name} </div>
         <div className="via">Via {this.state.place.Via}</div>
         <div className="orario">Orario: {this.state.place.OrarioApertura} - {this.state.place.OrarioChiusura}</div>
 
