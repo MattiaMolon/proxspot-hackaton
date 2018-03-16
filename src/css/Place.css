@@ -33,17 +33,20 @@
 .sensContainer {
   display: flex;
   flex-flow: row wrap;
+  padding: 0px 13px;
 }
 
 .hubText {
   cursor: pointer;
   color: black;
+  padding: 10px 10px;
 }
 
-.hubText:hover{
-  text-decoration: underline;
+.downArrow {
+  vertical-align: middle;
 }
+
 
 .sensText, .tupText {
-  padding: 0px 10px 0px 10px;
+  padding: 10px 20px;
 }

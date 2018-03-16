@@ -54,7 +54,7 @@ class Place extends Component {
         let sensDiv = [];
         if (sensKey.slice(0, 7) === "Sensore") {
           let sens = hub[sensKey];
-          sensDiv.push(<p className="sensText" key={sensKey + hub.NomeHub}> {sensKey}: </p>);
+          sensDiv.push(<div className="sensText" key={sensKey + hub.NomeHub}> {sensKey}: </div>);
 
           let closestDate = Object.keys(sens)[0];
 
@@ -65,7 +65,7 @@ class Place extends Component {
             }
           }
 
-          sensDiv.push(<p className="tupText" key={sens[closestDate].Data}> {sens[closestDate].Attivo ? "Occupato" : "Libero"}</p>);
+          sensDiv.push(<div className="tupText" key={sens[closestDate].Data}> {sens[closestDate].Attivo ? "Occupato" : "Libero"}</div>);
         }
         hubDiv.push(<div className="sensContainer" key={sensKey + hub.NomeHub}> {sensDiv} </div>);
       }
@@ -73,12 +73,13 @@ class Place extends Component {
         <Collapsible
           key={"collaps" + hub.NomeHub}
           trigger={
-            <p
+            <div
               className="hubText"
               key={hub.NomeHub}
             >
+              <i className="material-icons downArrow"> keyboard_arrow_down</i>
               {hub.NomeHub} - Posti liberi: {hub.postiLiberi}
-            </p>}
+            </div>}
         >
           {hubDiv}
         </Collapsible>)
@@ -87,7 +88,6 @@ class Place extends Component {
   }
 
   render() {
-
     return (
       <div className="container">
         <div className="name" style={{ backgroundColor: this.state.place.Colore }}> {this.state.place.name} </div>
