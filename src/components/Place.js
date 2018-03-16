@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Collapsible from 'react-collapsible';
+import firebase from '../firebase.js';
 import '../css/Place.css';
 
 class Place extends Component {
@@ -7,10 +8,27 @@ class Place extends Component {
     super();
     this.state = {
       name: props.name,
-      place: props.place,
+      place: {},
       hubs: [],
       date: new Date()
     };
+  }
+
+  componentDidMount() {
+    const placeRef = firebase.database().ref('Places/' + this.state.name);
+
+    placeRef.on('value', (snapshot) => {
+      let place = snapshot.val();
+      let hubs = [];
+      for (let hubKey in place) {
+        if (hubKey.slice(0, 3) === "Hub") {
+          let n = this.countPlacesHub(place[hubKey]);
+          hubs.push({ ...place[hubKey], postiLiberi: n });
+        }
+      }
+      this.setState({ place, hubs });
+    })
+
   }
 
   countPlacesHub(hub) {
@@ -33,17 +51,6 @@ class Place extends Component {
     return i
   }
 
-  componentDidMount() {
-    let place = this.state.place;
-    let hubs = [];
-    for (let hubKey in place) {
-      if (hubKey.slice(0, 3) === "Hub") {
-        let n = this.countPlacesHub(place[hubKey]);
-        hubs.push({ ...place[hubKey], postiLiberi: n });
-      }
-    }
-    this.setState({ hubs });
-  }
 
   getHubs() {
     let content = [];

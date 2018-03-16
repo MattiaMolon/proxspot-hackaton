@@ -43,11 +43,9 @@ class Main extends Component {
     if (this.state.loading) {
       return <Loading />
     } else if (this.state.selectedPlace) {
-      const currentPlace = this.state.places.find(place => place.name === this.state.placeName);
       return (
         <Place
           name={this.state.placeName}
-          place={currentPlace}
           returnHome={this.returnHome.bind(this)}
         />
       )
