@@ -4,7 +4,7 @@ import '../css/Loading.css';
 const Loading = (props) =>
   <div>
     <div className="title">
-      <p className="titleText"> Places </p>
+      <p className="titleText"> ProxSpot </p>
     </div>
     <div className="loader">
     </div>
