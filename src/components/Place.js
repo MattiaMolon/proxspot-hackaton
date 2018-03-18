@@ -14,7 +14,7 @@ class Place extends Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     const placeRef = firebase.database().ref('Places/' + this.state.name);
 
     placeRef.on('value', (snapshot) => {
