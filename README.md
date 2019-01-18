@@ -13,6 +13,6 @@ View a [live prototype build](https://tommasobonomo.github.io/proxspot-hackaton/
 To run the application locally, just clone the repository and run ```yarn install```, ```yarn start``` for a local preview.
 
 ## Team
-- [Mattia Molon](https://github.com/MattiaMolon)
+- [Tommaso Bonomo](https://github.com/tommasobonomo)
 - [Lorenzo Framba](https://github.com/LorenzoFramba)
 - [Giorgio Segalla](https://github.com/GiorgioSgl)
