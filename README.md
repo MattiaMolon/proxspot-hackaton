@@ -5,6 +5,9 @@ A client prototype of a system developed whilst competing in the Smart Future ha
 
 Built with React and Firebase integration.
 
+## Trailer
+A little trailer of the application (in italian): [link](https://vimeo.com/312958961)
+
 ## Demo
 
 View a [live prototype build](https://tommasobonomo.github.io/proxspot-hackaton/) hosted at GitHub pages
